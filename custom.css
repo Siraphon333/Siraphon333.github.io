@@ -76,59 +76,45 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    gap: 30px; /* เพิ่มระยะห่าง */
+    margin-top: 30px;
 }
 
+/* ปรับแต่งปุ่มสมาชิก */
 .member-button {
     text-align: center;
-    width: 150px;
+    width: 180px; /* กำหนดขนาดให้เท่ากัน */
     cursor: pointer;
 }
 
+/* ปรับแต่งรูปภาพให้เป็นวงรี */
 .member-button img {
     width: 100%;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease-in-out;
+    height: 200px; /* กำหนดความสูงเท่ากัน */
+    object-fit: cover;
+    border-radius: 50%; /* ปรับเป็นวงกลม */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ดูมีมิติ */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* เอฟเฟกต์เมื่อโฮเวอร์ */
 .member-button img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* ขยายขนาดขึ้นเล็กน้อย */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* ชื่อสมาชิก */
 .member-button span {
     font-size: 1rem;
     font-weight: bold;
+    display: block;
+    margin-top: 10px;
 }
 
-/* Profile Page */
-.profile-container {
-    display: none;
-    text-align: center;
-    margin: 50px auto;
-}
-
-.profile-container img {
-    width: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.profile-details p {
-    font-size: 1.2rem;
-}
-
-.back-button {
-    background-color: #3c5a3d;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-}
-
-.back-button:hover {
-    background-color: #88b04b;
+/* สำหรับหน้าจอเล็ก ให้เรียงแนวตั้ง */
+@media (max-width: 768px) {
+    .member-list {
+        flex-direction: column;
+        align-items: center;
+    }
 }
