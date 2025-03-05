@@ -164,6 +164,26 @@
             document.getElementById("profile-page").style.display = "none";
             document.getElementById("home-page").style.display = "block";
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const memberButtons = document.querySelectorAll(".member-button");
+        
+            memberButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    // ซ่อนรายละเอียดของสมาชิกทั้งหมดก่อน
+                    document.querySelectorAll(".member-details").forEach(detail => {
+                        detail.classList.remove("active");
+                    });
+        
+                    // แสดงรายละเอียดของสมาชิกที่กด
+                    const memberDetail = this.nextElementSibling;
+                    if (memberDetail && memberDetail.classList.contains("member-details")) {
+                        memberDetail.classList.add("active");
+                    }
+                });
+            });
+        });
+
     </script>
 
     <div class="profile-container" id="profile-page">
