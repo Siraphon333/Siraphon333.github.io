@@ -144,27 +144,3 @@
     display: none;
 }
 
-/* ให้แสดงเมื่อกดที่ .member-button */
-.member-button:focus + .member-details,
-.member-button:active + .member-details {
-    display: block;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-/* ซ่อนรายละเอียดของสมาชิกเริ่มต้น */
-.member-details {
-    display: none;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-/* แสดงเมื่อมีคลาส .active */
-.member-details.active {
-    display: block;
-}
