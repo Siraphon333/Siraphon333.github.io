@@ -134,23 +134,8 @@
     }
 }
 
-/* ซ่อน ABOUT ME */
-#about-me {
-    display: none; /* ซ่อน About Me */
+#profile-page {
+    display: none; /* ซ่อนโปรไฟล์ตั้งแต่แรก */
 }
 
-/* ซ่อนรายละเอียดของสมาชิกเริ่มต้น */
-.member-details {
-    display: none;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-}
-
-/* แสดงเมื่อมีคลาส .active */
-.member-details.active {
-    display: block;
-}
 
