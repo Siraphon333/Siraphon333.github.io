@@ -138,6 +138,21 @@
             </div>
         </div>
 
+        
+    <div class="profile-container" id="profile-page">
+            <h1>ABOUT ME</h1>
+            <img id="profile-img" src="" alt="Profile Picture">
+            <div class="profile-details">
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Nickname:</strong> <span id="nickname"></span></p>
+                <p><strong>Student ID:</strong> <span id="student-id"></span></p>
+                <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
+                <p><strong>Contact:</strong> <span id="contact"></span></p>
+            </div>
+            <button class="back-button" onclick="goBack()">Back</button>
+        </div>
+    </div>
+
 <script>
         document.addEventListener("DOMContentLoaded", function () {
             const profiles = {
@@ -157,6 +172,7 @@
                     document.getElementById("profile-img").src = profiles[studentID].img;
         
                     document.getElementById("home-page").style.display = "none";
+                     document.getElementById("profile-page").style.display = "block";
                 }
             }
         
@@ -164,30 +180,15 @@
                 document.getElementById("profile-page").style.display = "none";
                 document.getElementById("home-page").style.display = "block";
             }
-        
-            const memberImages = document.querySelectorAll(".member-button img");
+    /*     const memberImages = document.querySelectorAll(".member-button img");
             memberImages.forEach(img => {
                 img.addEventListener("click", function () {
                     const studentID = this.parentElement.getAttribute("onclick").match(/\d+/)[0]; 
                     showProfile(studentID);
                 });
             });
-        });
+        }); /*
 </script>
-
-
-    <div class="profile-container" id="profile-page">
-            <h1>ABOUT ME</h1>
-            <img id="profile-img" src="" alt="Profile Picture">
-            <div class="profile-details">
-                <p><strong>Name:</strong> <span id="name"></span></p>
-                <p><strong>Nickname:</strong> <span id="nickname"></span></p>
-                <p><strong>Student ID:</strong> <span id="student-id"></span></p>
-                <p><strong>Date of Birth:</strong> <span id="dob"></span></p>
-                <p><strong>Contact:</strong> <span id="contact"></span></p>
-            </div>
-            <button class="back-button" onclick="goBack()">Back</button>
-        </div>
-    </div>/*-->
+        
 </body>
 </html>
