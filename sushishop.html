@@ -139,44 +139,41 @@
         </div>
 
 <script>
-    const profiles = {
-        "66050729": { name: "Taweesap", nickname: "Fluk", contact: "fluktaaa", img: "assets/images/S__5160979.jpg" },
-        "66050764": { name: "Thanyaporn", nickname: "Plamy", contact: "mlie.7", img: "assets/images/136471.jpg" },
-        "66050841": { name: "Prapatson", nickname: "Pick", contact: "pjepick", img: "assets/images/236E1DBE-4EDE-49C5-8714-D897C26F7706 - Copy.jpg" },
-        "66051036": { name: "Wisarut", nickname: "Ohm", contact: "ohm.mhx_", img: "assets/images/929CC713-1F05-4E1C-8C85-7FCF946F241E.jpg" },
-        "66051053": { name: "Siraphon", nickname: "Lukmu", contact: "siraphsx_", img: "assets/images/siii.jpg" }
-    };
-
-    function showProfile(studentID) {
-        if (profiles[studentID]) {
-            document.getElementById("name").textContent = profiles[studentID].name;
-            document.getElementById("nickname").textContent = profiles[studentID].nickname;
-            document.getElementById("student-id").textContent = studentID;
-            document.getElementById("contact").textContent = profiles[studentID].contact;
-            document.getElementById("profile-img").src = profiles[studentID].img;
-
-            document.getElementById("home-page").style.display = "none";
-            document.getElementById("profile-page").style.display = "block";
-        }
-    }
-
-    function goBack() {
-        document.getElementById("profile-page").style.display = "none";
-        document.getElementById("home-page").style.display = "block";
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const memberImages = document.querySelectorAll(".member-button img");
-
-        memberImages.forEach(img => {
-            img.addEventListener("click", function (event) {
-                const studentID = this.parentElement.getAttribute("onclick").match(/\d+/)[0]; 
-                showProfile(studentID);
-                event.stopPropagation();
+        document.addEventListener("DOMContentLoaded", function () {
+            const profiles = {
+                "66050729": { name: "Taweesap", nickname: "Fluk", contact: "fluktaaa", img: "assets/images/S__5160979.jpg" },
+                "66050764": { name: "Thanyaporn", nickname: "Plamy", contact: "mlie.7", img: "assets/images/136471.jpg" },
+                "66050841": { name: "Prapatson", nickname: "Pick", contact: "pjepick", img: "assets/images/236E1DBE-4EDE-49C5-8714-D897C26F7706 - Copy.jpg" },
+                "66051036": { name: "Wisarut", nickname: "Ohm", contact: "ohm.mhx_", img: "assets/images/929CC713-1F05-4E1C-8C85-7FCF946F241E.jpg" },
+                "66051053": { name: "Siraphon", nickname: "Lukmu", contact: "siraphsx_", img: "assets/images/siii.jpg" }
+            };
+        
+            function showProfile(studentID) {
+                if (profiles[studentID]) {
+                    document.getElementById("name").textContent = profiles[studentID].name;
+                    document.getElementById("nickname").textContent = profiles[studentID].nickname;
+                    document.getElementById("student-id").textContent = studentID;
+                    document.getElementById("contact").textContent = profiles[studentID].contact;
+                    document.getElementById("profile-img").src = profiles[studentID].img;
+        
+                    document.getElementById("home-page").style.display = "none";
+                    document.getElementById("profile-page").style.display = "block";
+                }
+            }
+        
+            function goBack() {
+                document.getElementById("profile-page").style.display = "none";
+                document.getElementById("home-page").style.display = "block";
+            }
+        
+            const memberImages = document.querySelectorAll(".member-button img");
+            memberImages.forEach(img => {
+                img.addEventListener("click", function () {
+                    const studentID = this.parentElement.getAttribute("onclick").match(/\d+/)[0]; 
+                    showProfile(studentID);
+                });
             });
         });
-    });
-
 </script>
 
 
