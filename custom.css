@@ -227,3 +227,34 @@
     outline: none;
     box-shadow: 0px 0px 10px rgba(0.1, 0.1, 0.1, 0.1); /* ให้เงาเมื่อกด */
 }
+
+/*Download*/
+.download-btn {
+    background-color: #bd3c2b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+.download-btn:hover {
+    background-color: #000000;
+}
+
+.video-btn {
+    background-color: #287926;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+.video-btn:hover {
+    background-color: #000000;
+}
